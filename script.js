@@ -1,21 +1,25 @@
 const receta = {
   titulo: "Torrijas saludables (sin gluten, lactosa y azúcar)",
-  imagen: "https://via.placeholder.com/500",
-  descripcion: "Una versión saludable de las torrijas tradicionales, apta para intolerancias.",
   ingredientes: [
-    "Pan sin gluten",
-    "Bebida vegetal (almendra, avena sin gluten, etc.)",
-    "Huevos",
-    "Canela",
-    "Edulcorante natural (eritritol o stevia)",
-    "Aceite de oliva suave"
+    "1 Baguette sin glúten y sin lactosa del Mercadona",
+    "1/2 litro de leche vegetal (preferiblemente avena o avellanas)",
+    "2 Huevos medianos",
+    "Canela en rama y en polvo",
+    "Eritritol (o azúcar)",
+    "Aceite de oliva o girasol",
+    "Piel de 1/2 naranja",
+    "Piel de 1/2 limón",
+    "1 cdta. de miel",
   ],
   pasos: [
-    "Calienta la bebida vegetal con canela y edulcorante.",
-    "Empapa las rebanadas de pan en la mezcla.",
-    "Pásalas por huevo batido.",
-    "Fríe en aceite hasta dorar.",
-    "Espolvorea canela por encima y sirve."
+    "Precalentar el horno a máxima potencia con calor arriba y abajo",
+    "Pelar la piel de la naranja y el limón retirando bien toda la parte blanca (amarga)",
+    "Calentar la leche vegetal sin que llegue a hervir e introducir la rama de canela, las pieles de los cítricos y disolver la miel. Dejar infusionar durante 15 minutos",
+    "Tostar la baguette durante 3-5 minutos vigilando que no se queme",
+    "Pasados los 15 minutos pasar la leche infusionada con las pieles a una fuente/bandeja y dejar que enfríe durante 15 minutos. Retirar las pieles y la canela al terminar",
+    "Partir la baguette en rodajas gruesas (2-3 dedos de grosor) e introducir en la leche infusionada 10 minutos por cada lado",
+    "Sacar las torrijas de la leche, pasar por huevo batido y freír en una capa fina de aceite vegetal hasta conseguir el dorado deseado",
+    "Escurrir el exceso de aceite sobre papel absorbente y espolvorear con una mezcla de eritritol y canela molida. Se recomienda dejarlas reposar en un tupper",
   ]
 };
 
@@ -27,7 +31,6 @@ div.classList.add("receta");
 div.innerHTML = `
   <img src="${receta.imagen}" alt="${receta.titulo}">
   <h2>${receta.titulo}</h2>
-  <p>${receta.descripcion}</p>
 
   <h3>Ingredientes:</h3>
   <ul>
