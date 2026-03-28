@@ -1,58 +1,28 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f1a14;
-  color: #e6f2ea;
-}
-
-header {
-  background: #1b3a2f;
-  color: #a7f3d0;
-  padding: 1.5rem;
-  text-align: center;
-  border-bottom: 2px solid #2f5d4a;
-}
-
-#recetas-container {
-  display: flex;
-  justify-content: center;
-  padding: 2rem 1rem;
-}
-
-.receta {
-  background: #16261d;
-  border-radius: 12px;
-  padding: 1.5rem;
-  max-width: 500px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-}
-
-.receta img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.receta h2 {
-  color: #6ee7b7;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #1b3a2f;
-  color: #a7f3d0;
-  margin-top: 2rem;
-}
-
-/* Easter egg oculto */
-#easter-egg {
+/* Popup */
+.popup {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #14532d;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #1b3a2f;
+  padding: 2rem;
+  border-radius: 12px;
   color: #d1fae5;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #000;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 0 15px black;
+}
+
+#cerrar {
+  cursor: pointer;
+  float: right;
+  font-size: 1.5rem;
 }
