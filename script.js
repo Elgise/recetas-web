@@ -1,21 +1,21 @@
 const receta = {
-  titulo: "Risotto de setas",
+  titulo: "Torrijas saludables (sin gluten, lactosa y azúcar)",
   imagen: "https://via.placeholder.com/500",
-  descripcion: "Un risotto cremoso con setas, perfecto para los amantes de la cocina natural.",
+  descripcion: "Una versión saludable de las torrijas tradicionales, apta para intolerancias.",
   ingredientes: [
-    "Arroz arborio",
-    "Setas variadas",
-    "Caldo vegetal",
-    "Queso parmesano",
-    "Ajo",
-    "Cebolla"
+    "Pan sin gluten",
+    "Bebida vegetal (almendra, avena sin gluten, etc.)",
+    "Huevos",
+    "Canela",
+    "Edulcorante natural (eritritol o stevia)",
+    "Aceite de oliva suave"
   ],
   pasos: [
-    "Sofríe la cebolla y el ajo.",
-    "Añade las setas y cocina unos minutos.",
-    "Incorpora el arroz y remueve.",
-    "Añade caldo poco a poco sin dejar de remover.",
-    "Agrega el queso al final y mezcla bien."
+    "Calienta la bebida vegetal con canela y edulcorante.",
+    "Empapa las rebanadas de pan en la mezcla.",
+    "Pásalas por huevo batido.",
+    "Fríe en aceite hasta dorar.",
+    "Espolvorea canela por encima y sirve."
   ]
 };
 
@@ -42,16 +42,20 @@ div.innerHTML = `
 
 contenedor.appendChild(div);
 
-// 🎁 Easter egg
-let contador = 0;
+// 🥚 Easter egg (clic 10 veces en el título)
+let clicks = 0;
+const titulo = document.getElementById("titulo");
+const popup = document.getElementById("popup");
+const cerrar = document.getElementById("cerrar");
 
-document.addEventListener("keydown", (e) => {
-  if (e.key.toLowerCase() === "a") {
-    contador++;
-    if (contador === 5) {
-      document.getElementById("easter-egg").style.display = "block";
-    }
-  } else {
-    contador = 0;
+titulo.addEventListener("click", () => {
+  clicks++;
+  if (clicks === 10) {
+    popup.style.display = "flex";
+    clicks = 0;
   }
+});
+
+cerrar.addEventListener("click", () => {
+  popup.style.display = "none";
 });
